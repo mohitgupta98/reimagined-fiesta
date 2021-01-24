@@ -1,12 +1,18 @@
 <template>
   <div id="rectangle">
+    <router-link to="/homepage">
     <img src="../images/quora_logo.png" alt="" id="quora_logo">
+    </router-link>
     <input type="text" id="search_bar" placeholder="   Search Quora">
     <img src="../images/search_icon.png" alt="" id="search_icon">
+    <router-link to="/homepage">
     <img src="../images/home_icon.png" alt="" id="home_icon">
+    </router-link>
     <img src="../images/notification.png" alt="" id="notification">
     <h3 id="user_name">Mohit Gupta</h3>
+    <router-link to="/myprofile">
     <img src="../images/profile-user.png" alt="" id="user_icon">
+    </router-link>
 
   </div>
 </template>
