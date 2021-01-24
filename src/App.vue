@@ -1,15 +1,19 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <Header></Header>
+    <div id="space_after_header"></div>
+    <!-- <Homepage></Homepage> -->
+    <!-- <Search></Search> -->
     <router-view/>
   </div>
 </template>
 
 <script>
+import Header from './components/Header.vue'
+// import Search from './views/Search.vue'
+// import Homepage from './views/Homepage.vue'
 export default {
+  components: { Header },
   name: 'App'
 }
 </script>
@@ -21,6 +25,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+#space_after_header{
+  margin-bottom: 100px;
 }
 
 #nav {
