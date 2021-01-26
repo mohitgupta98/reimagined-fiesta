@@ -9,17 +9,18 @@
     <h1 id="profile_name">{{ profileDetails.businessName }}</h1>
     <h4 id="profile_rating">Profile Rating: 2900</h4>
     <div style="display: flex;">
-      <p style="margin-left: 33px">{{ followersCount }}Followers</p>
-      <p style="margin-left: 25px">{{ followingCount }}Following</p>
-      <img src="../images/edit.png" alt="" id="edit_icon">
+      <p style="margin-left: 35px">10 Followers</p>
+      <p style="margin-left: 10px">10 Following</p>
+      <button id="follow_button">Follow</button>
     </div>
+    <p id="email_id">Email ID: {{ profileDetails.businessEmail }}</p>
     <div>
-    <p id="bio">{{profileDetails.businessDescription}}</p>
+    <p id="bio">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt adipisci possimus nobis distinctio consectetur. Earum, laudantium saepe fuga magnam laborum ea neque repudiandae id rerum nam, ducimus cupiditate facere consectetur.</p>
     </div>
 </div>
 <Advertisement></Advertisement>
 </div>
-<Post></Post>
+<Post :businessName="profileDetails.businessName"></Post>
 <Post></Post>
 <Post></Post>
 <Post></Post>
@@ -36,29 +37,15 @@ export default {
   components: { Category, Advertisement, Post },
   data: () => {
     return {
-      profileDetails: {},
-      followersCount: 0,
-      followingCount: 0
+      profileDetails: {}
     }
   },
   mounted () {
-    axios.get('http://10.177.1.217:9007/profile/getUserProfileDetails/1234')
+    axios.get('http://10.177.1.217:9007/profile/getBusinessProfileDetails/abc')
       .then(response => {
         console.log(response)
         console.log()
         this.profileDetails = response.data.data
-      })
-    axios.get('http://10.177.1.217:9007/profile/getFollowersCount/Dali')
-      .then(response => {
-        console.log(response)
-        console.log()
-        this.followersCount = response.data
-      })
-    axios.get('http://10.177.1.217:9007/profile/getFollowingCount/3')
-      .then(response => {
-        console.log(response)
-        console.log()
-        this.followingCount = response.data
       })
   }
 }
@@ -81,6 +68,9 @@ export default {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+#email_id{
+  margin-right: 220px;
+}
 #profile_name{
   margin-right: 220px;
   margin-top: 30px;
@@ -89,11 +79,17 @@ export default {
   margin-right: 250px;
   margin-top: 20px;
 }
-#edit_icon{
-  width: 20px;
-  height: 20px;
-  margin-top: 20px;
-  margin-left: 230px;
+#follow_button{
+  margin-top: 10px;
+  margin-left: 150px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 10px;
+  background: #b82929;
+  color: white;
+  margin-bottom: 10px;
 }
 #bio{
   position: relative;

@@ -2,12 +2,13 @@
   <div id="landing_page">
     <Category></Category>
     <div>
-    <AskAQuestion></AskAQuestion>
-    <button id="ask_question">Ask Question</button>
-    <Post></Post>
-    <Post></Post>
-    <Post></Post>
-    <Post></Post>
+      <h2>Unanswered Questions</h2>
+      <OnlyQuestion></OnlyQuestion>
+      <OnlyQuestion></OnlyQuestion>
+      <OnlyQuestion></OnlyQuestion>
+      <OnlyQuestion></OnlyQuestion>
+      <OnlyQuestion></OnlyQuestion>
+
     </div>
     <div>
       <Advertisement></Advertisement>
@@ -18,11 +19,10 @@
 
 <script>
 import Advertisement from '../components/Advertisement.vue'
-import AskAQuestion from '../components/AskAQuestion.vue'
 import Category from '../components/Category.vue'
-import Post from '../components/Post.vue'
+import OnlyQuestion from '../components/OnlyQuestion.vue'
 export default {
-  components: { Post, Category, Advertisement, AskAQuestion },
+  components: { Category, Advertisement, OnlyQuestion },
   name: 'Homepage'
 }
 

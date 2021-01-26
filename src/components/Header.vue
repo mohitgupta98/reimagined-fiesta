@@ -3,12 +3,19 @@
     <router-link to="/homepage">
     <img src="../images/quora_logo.png" alt="" id="quora_logo">
     </router-link>
-    <input type="text" id="search_bar" placeholder="   Search Quora">
+    <input type="text" id="search_bar" placeholder="Search Quora">
+    <router-link to="/search">
     <img src="../images/search_icon.png" alt="" id="search_icon">
+    </router-link>
     <router-link to="/homepage">
     <img src="../images/home_icon.png" alt="" id="home_icon">
     </router-link>
-    <img src="../images/notification.png" alt="" id="notification">
+    <router-link to="/allquestions">
+    <img src="../images/question-mark.png" alt="" id="question_tab">
+    </router-link>
+    <router-link to="/notifications">
+    <img src="../images/bell_icon.png" alt="" id="notification">
+    </router-link>
     <h3 id="user_name">Mohit Gupta</h3>
     <router-link to="/myprofile">
     <img src="../images/profile-user.png" alt="" id="user_icon">
@@ -39,7 +46,7 @@ export default {
   left: 0px;
   top: 0px;
   background: #be1e1e;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   margin-bottom: 100px;
 }
 
@@ -52,6 +59,7 @@ export default {
   background: #FEFEFE;
   border: 0px;
   border-radius: 10px;
+  padding-left: 20px;
 }
 
 #search_icon{
@@ -66,7 +74,15 @@ export default {
   position: fixed;
   width: 48px;
   height: 49px;
-  left: 1050px;
+  left: 1000px;
+  top: 15px;
+}
+
+#question_tab{
+  position: fixed;
+  width: 40px;
+  height: 41px;
+  left: 1055px;
   top: 15px;
 }
 

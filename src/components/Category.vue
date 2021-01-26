@@ -20,7 +20,7 @@ export default {
 <style scoped>
 #rectangle{
   position: fixed;
-  /* top:100px; */
+  top:100px;
   left:25px;
   width: 263px;
   height: 600px;
